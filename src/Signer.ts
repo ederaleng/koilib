@@ -24,7 +24,7 @@ import {
 } from "./utils";
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
-import { koinos } from "./protoModules/protocol-proto.js";
+import { koinos } from "koinos-proto-js";
 
 export interface SignerInterface {
   provider?: Provider;
@@ -631,7 +631,7 @@ export class Signer implements SignerInterface {
       const oldNonce = (await this.provider.getNonce(payee || payer)) as number;
       const message = koinos.chain.value_type.create({
         // todo: consider using bigint for big nonces
-        uint64_value: String(oldNonce + 1),
+        uint64_value: Number(oldNonce + 1),
       });
       const nonceEncoded = koinos.chain.value_type
         .encode(message)

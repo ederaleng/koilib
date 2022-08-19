@@ -8,7 +8,7 @@ import {
 } from "./interface";
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
-import { koinos } from "./protoModules/protocol-proto.js";
+import { koinos } from "koinos-proto-js";
 import { decodeBase64url } from "./utils";
 
 /* eslint-disable @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access */
